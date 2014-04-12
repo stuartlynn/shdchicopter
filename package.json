@@ -1,20 +1,11 @@
 {
-  "author": "Stuart Lynn",
-  "name": "quad_station",
-  "description": "",
-  "version": "0.0.1",
-  "homepage": "",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  
-  "dependencies": {
-    "ardrone-autonomy" : "*",
-    "voxel-drone": "*",
-    "ar-drone" : "*"
-  },
-  "devDependencies": {
-    
+    "name": "application-name"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "*"
+      , "socket.io" : "latest"
+      ,"osc-min" : "*"
+      ,"ar-drone" : "*"
   }
 }

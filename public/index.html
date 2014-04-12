@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title></title>
+
+  <script type = "text/javascript" src='lib/app.js'></script>
+
+  <script type = "text/javascript" src='lib/jquery.js'></script>
+  <script type = "text/javascript" src='socket.io/socket.io.js'></script>
+
+  <script type="text/javascript" src='lib/app.js'></script>
+
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      WeightReceiver.setUpSockets();
+
+    });
+  </script>
+</head>
+<body>
+
+  <div id='prompt' class='full_screen show'>
+    <h1> How much would you weigh on different planets?</h1>
+    <h2>Step on to find out!</h2>
+  </div>
+
+  <div id='active_screen' class='full_screen'>
+    <h2> On the surface of </h2>
+    <h1> <span class='planet'></span> </h1>
+    <h2>you would weigh</h2>
+    <h1 class='weight'> </h1>
+    
+  </div>
+
+  <div id='fake_background'></div>
+
+</body>
+</html>

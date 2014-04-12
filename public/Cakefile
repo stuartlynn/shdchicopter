@@ -1,0 +1,5 @@
+exec = require 'easy-exec'
+
+task 'watch', (options) ->
+  exec 'coffee --watch --output lib/ --compile ./src'
+  exec 'stylus --watch styles/ --out ./styles'
