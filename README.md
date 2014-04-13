@@ -29,15 +29,15 @@ This will create a server on http://localhost:4455 which if you point a browser 
 
 Flying is intuitive, so any crashes are entirely the fault of the pilot and not the hastily cobbled together code.
 
-Taking Off        - Simply step on to the balance board 
-Landing           - Simply step off to the balance board 
-Forward           - Lean forward 
-Backward          - Lean Backward
-Clockwise         - Lean Right
-Counter Clockwise - Lean Left
+* Taking Off        - Simply step on to the balance board 
+* Landing           - Simply step off to the balance board 
+* Forward           - Lean forward 
+* Backward          - Lean Backward
+* Clockwise         - Lean Right
+* Counter Clockwise - Lean Left
 
 ## Team 
 
-Stuart Lynn      - Idiot who came up with this idea in the first place 
-Andrew Wittrock  - Aspiring Dev/Idiot
-Alex Codreanu    - Romanian Dev/Idiot
+* Stuart Lynn      - Idiot who came up with this idea in the first place 
+* Andrew Wittrock  - Aspiring Dev/Idiot
+* Alex Codreanu    - Romanian Dev/Idiot
