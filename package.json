@@ -7,5 +7,6 @@
       , "socket.io" : "latest"
       ,"osc-min" : "*"
       ,"ar-drone" : "*"
+      ,"dronestream" : "*"
   }
 }

@@ -1,5 +1,6 @@
 osc = require 'osc-min'
 udp = require "dgram"
+dronestream = require 'dronestream'
 
 ardrone = require("ar-drone")
 @copter  = ardrone.createClient()
@@ -11,34 +12,23 @@ http = require('http')
 server = http.createServer(app)
 
 
-console.log @copter
-sockets = []
-
-stuFactor = 214.1/0.97
-
-pound_to_kg = 0.4536
+dronestream.listen(server)
 
 app.use(express.static('public'));
-
-io = require('socket.io').listen(server);
-# @copter.takeoff()
-
-
-io.sockets.on 'connection'  , (socket)=>
-    sockets.push socket 
 
 @copter_flying = false 
 @sum = 0 
 @x   = 0 
 @y   = 0
 
-@copter.disableEmergency()
+# @copter.takeoff()
+
+# @copter.disableEmergency()
 
 sock = udp.createSocket "udp4", (msg, rinfo)=>
 
   try 
     data = osc.fromBuffer(msg)
-    
 
     if data.address == "/wii/1/balance/4"
       @sum = data.args[0].value      
@@ -83,8 +73,7 @@ sock = udp.createSocket "udp4", (msg, rinfo)=>
 
   catch _error
     error = _error
-    # console.log("invalid OSC packet")
+    console.log("invalid OSC packet")
 
 sock.bind(8005)
-
 server.listen(4455)
